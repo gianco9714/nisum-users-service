@@ -1,13 +1,9 @@
 package com.nisum.users.services;
 
-import java.time.LocalDateTime;
 import java.util.UUID;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 import com.nisum.users.common.exception.EmailAlreadyExistException;
 import com.nisum.users.common.exception.InvalidEmailException;
-//import com.nisum.users.common.utils.PasswordValidator;
 import com.nisum.users.common.exception.InvalidPasswordException;
 import com.nisum.users.common.utils.ErrorMessages;
 import com.nisum.users.entities.UserEntity;

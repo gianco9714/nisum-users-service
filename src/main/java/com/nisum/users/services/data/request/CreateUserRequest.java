@@ -2,7 +2,6 @@ package com.nisum.users.services.data.request;
 
 import java.util.List;
 
-import com.nisum.users.entities.PhonesEntity;
 import lombok.Data;
 
 /**
@@ -18,6 +17,6 @@ public class CreateUserRequest {
 
     private String password;
 
-    private List<PhonesEntity> phones;
+    private List<PhoneRequest> phones;
 
 }

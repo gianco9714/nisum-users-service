@@ -1,6 +1,8 @@
 package com.nisum.users;
 
 import java.lang.reflect.Field;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 import com.nisum.users.common.exception.EmailAlreadyExistException;
@@ -10,6 +12,7 @@ import com.nisum.users.entities.UserEntity;
 import com.nisum.users.repositories.UserRepository;
 import com.nisum.users.services.UserService;
 import com.nisum.users.services.data.request.CreateUserRequest;
+import com.nisum.users.services.data.request.PhoneRequest;
 import com.nisum.users.services.data.response.CreateUserResponse;
 import com.nisum.users.services.mapper.UserMapper;
 import org.junit.jupiter.api.BeforeEach;
@@ -59,6 +62,14 @@ public class UserTest {
         CreateUserRequest request = new CreateUserRequest();
         request.setEmail("test@example.com");
         request.setPassword("TestPass123!");
+        List<PhoneRequest> phoneRequestList = new ArrayList<>();
+        PhoneRequest phoneRequest = new PhoneRequest();
+        phoneRequest.setCitycode("1234567");
+        phoneRequest.setCountrycode("1234567");
+        phoneRequest.setNumber("1234567");
+
+        phoneRequestList.add(phoneRequest);
+        request.setPhones(phoneRequestList);
 
         UserEntity userEntity = new UserEntity();
         userEntity.setEmail(request.getEmail());
