@@ -10,6 +10,8 @@ This service provides endpoints for user registration
 
 - H2
 
+- Maven
+
 ## Usage/Examples
 
 Url
